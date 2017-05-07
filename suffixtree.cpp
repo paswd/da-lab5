@@ -90,7 +90,7 @@ TNumber TSuffixTree::Split(TState sub_data) {
 	TNumber id = this->Body.size();
 	this->AddNode();
 	this->Body[id] = TSuffixTreeNode(tmp_node.Left, tmp_node.Left + sub_data.Position, tmp_node.Parent);
-	this->Body[tmp_node.Parent].GetChild(this->Str[this->StrCurrent][node.Left]) = id;
+	this->Body[tmp_node.Parent].GetChild(this->Str[this->StrCurrent][tmp_node.Left]) = id;
 	this->Body[id].GetChild(this->Str[this->StrCurrent][tmp_node.Left + sub_data.Position]) = sub_data.Node;
 	this->Body[sub_data.Node].Parent = id;
 	this->Body[sub_data.Node].Left += sub_data.Position;
@@ -148,6 +148,11 @@ TSTATE
 =====
 */
 
+TState::TState(void) {
+	this->Node = 0;
+	this->Position = 0;
+
+}
 TState::TState(TNumber node, TNumber position) {
 	this->Node = node;
 	this->Position = position;

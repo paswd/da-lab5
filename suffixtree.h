@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <vector>
 
 //const size_t MAX_CNT = 4096
 
@@ -29,8 +30,9 @@ public:
  
 class TState {
 public:
-	TNumber Node
+	TNumber Node;
 	TNumber Position;
+	TState(void);
 	TState(TNumber node, TNumber position);
 };
 

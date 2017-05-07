@@ -5,12 +5,12 @@
 using namespace std;
 
 int main(void) {
-	SuffixTree tree;
+	TSuffixTree tree;
 	//tree.Str[0] = "abcabca";
 	//cout << "Ptr" << endl;
 	//tree.Build(0);
 	tree.GetStrings();
-	tree.Build(0);
+	tree.Build();
 
 	return 0;
 }
